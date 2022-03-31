@@ -1,0 +1,154 @@
+---
+title: "L01 Review"
+subtitle: "Data Science 3 with R (STAT 301-3)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: "tango"
+---
+
+## Overview
+
+The goal of this lab is to review vocabulary and concepts from the Data Science 2 with R (STAT 301-2).
+
+## Questions
+
+When completing the following questions ensure that that your solutions are clearly indicated and that your document is neatly formatted. Consider including diagrams that in some of your answers since it might make things easier to describe.
+
+
+### Question 1
+
+Provide a brief outline/overview of the steps involved in a supervised machine learning process. Could provide this as a bulleted list. 
+
+1. Cleaning the data
+2. Understand the data (possibly perform an EDA)
+3. Feature Engineering: Set expectations of the goal of your model and performance 
+4. Model tuning and selection
+5. Model evaluation
+
+
+<br>
+
+### Question 2
+
+Explain the difference between supervised and unsupervised learning.
+
+**Unsupervised models learn patterns or other characteristics of the data in order to understand the relationship between variables. They lack an outcome (dependent variable) and don't have an explicit relationship between predictors and the outcome. Supervised models have an outcome variable and fall under the two main categories Regression or Classification. Examples of supervised models are Linear regression, neural networks, and many other methods.**
+
+<br>
+
+### Question 3 
+
+In general, we can classify a model by its purpose into 1 of the 3 categories below. Provide a brief description of the goals of these model classes.
+
+1. Descriptive Models: **Highlights characteristics of the data by visually emphasizing a trend or subset of data**
+
+2. Inferential Models: **Create a conclusion for some research question and/or to test some hypothesis using statistical tests**
+
+3. Predictive Models: **Produce accurate prediction about future data based upon past data**
+
+<br>
+
+### Question 4 
+
+We can further describe/classify predictive models by how they were derived or developed as being either mechanistic or empirically driven. 
+
+#### Part A
+What does it mean to be a mechanistic model?
+
+**Mechanistic models can be found using principles to create a model equation dependent on some assumptions. Data is used to estimate unknown parameters of an equation in order to generate predictions. Similar to inferential models, mechanistic process are dependent on assumptions that define said model equation**
+
+#### Part B
+What does it mean to be an empirically driven model?
+**Empirically driven models are produced with vaguer assumtions. Such models are typically machine learning such as KNN model. Using some data, a new data set is predicted using the set model, such as the K-Nearest Neighbor.**
+
+#### Part C
+How does the mechanistic and empirically driven model terminology relate to the parametric and nonparametric model terminology? 
+
+**Parametric models depend on the number of and values of some parameters. Both mechanistic and empirically driven models rely on known or unknown parameters**
+
+#### Part D
+In general, is a mechanistic or empirically driven model easier to understand? Explain.
+**I think that mechanistic driven models are easier to understand because they are based upon concrete assumptions drawn from previous data**
+
+#### Part E
+How does mechanistic and empirically driven model terminology relate to the idea of model flexibility? That is, which would be more or less flexible than the other.
+
+**Empirically driven models are relatively more flexible than mechanistic because empirical are based upon vague assumptions, rather than a discrete pattern observed from previous data.**
+
+#### Part F
+Describe the bias-variance trade-off when considering the use of a mechanistic or empirically driven model. 
+
+**The trade-off with predicted metrics of mean and variance are dependant on parameters and the type of model. Explorations can be used to explore the biases for certain model candidates**
+
+<br>
+
+### Question 5 
+
+Explain the difference between a regression and classification machine learning (ML) problems.
+
+**Regression ML predicts a numeric outcome and Classification ML predicts an ordered or unordered set of qualitative values**
+
+
+<br>
+
+### Question 6 
+
+When splitting the data, why is it useful to stratify by the outcome/target variable? 
+
+**Stratifying data sorts and regroups the data into groups or layers. Stratifying by the outcome variable groups the data based upon values for the outcome variable, which can make patterns or meanings of data easier to extract.**
+
+<br>
+
+### Question 7 
+
+Briefly describe how v-fold cross validation with repeats is used to estimate test RMSE. Also provide an explanation of why we use it. 
+
+**Cross validation is a method of resampling that partitions the data into V sets, called folds, of almost equal size. For each iteration (fold), the model is run and produces V sets of performance statistics. Root-mean-square deviation (RMSE) determines the standard error of the mean, and is equal to the standard deviation divided by the square root of R, therefore RMSE is lowered, ie error is lowered, when you cross-validate the data.**
+
+<br>
+
+### Question 8
+
+When might we use a bootstrap resampling procedure instead of v-fold cross validation to estimate test RMSE?
+**Bootstrap resampling is used to estimate the distribution of a sample of the data, whose 'theoretic properties' are uncontrollable. It produces performance estimates with low variance and with a 'pessimistic' bias, ie, it rounds down the accuracy.**
+
+<br>
+
+### Question 9 
+
+Briefly describe model tuning and why we use it.
+
+**For unknown parameters, we can use optimization methods to tune such parameters. Tuning parameters are usually found in ML models and often require some pre-processing steps. Tuning parameters can be set and tweaked in order to optimize statistical properties.**
+
+<br>
+
+### Question 10 
+
+What are two common performance metrics when dealing with a regression ML problem?
+**Root mean square error (RMSE) and Mean Absolute error (MAE)**
+
+What are two common performance metrics when dealing with a classification ML problem?
+**Confusion Matrix (or other matrix) and AUC-ROC curve**
+
+<br>
+
+### Question 11
+
+A political candidate's campaign has detailed voter history data for their constituents. The campaign is interested in two questions:
+
+Classify each question/problem as either prediction or inferential. Explain your reasoning for each.
+
+1. Given a voter's profile/data how likely is it that they will vote in favor of the candidate?
+**Predictive because using a voter's data, we can predict a NUMERIC outcome as a percentage of how likely it is that they vote for some candidate**
+
+2. How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?
+**Classification because we not are predicting a numeric value based upon the past data. We could return a set of variables that may change based upon such interaction, or Yes/No value determining whether or not their support changes.**
+
+
+<br>
+
+## Github Repo Link
+
+[YOUR GITHUB URL](TEXT FOR YOUR GITHUB URL){target="_blank"}
